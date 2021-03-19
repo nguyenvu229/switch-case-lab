@@ -8,7 +8,7 @@ function checkPrice() {
       result = "Ổi: 20000 VND/kg"
       break
     case "dưa hấu":
-    result = "Dưa Hấu: 20000 VND/kg"
+      result = "Dưa Hấu: 20000 VND/kg"
       break
     case "táo":
       result = "Táo: 30000 VND/kg"
