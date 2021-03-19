@@ -2,11 +2,10 @@ function tinhDiem() {
   let toan = Number(document.getElementById("toan").value)
   let van = Number(document.getElementById("van").value)
   let anh = Number(document.getElementById("anh").value)
+  let tong = toan + van + anh
 
   let index = document.getElementById("monThi").selectedIndex
   let khuVuc = document.getElementsByTagName("option")[index].value
-
-  let tong = toan + van + anh
 
   switch (khuVuc) {
     case "kv1":
