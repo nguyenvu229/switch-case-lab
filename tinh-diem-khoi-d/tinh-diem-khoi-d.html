@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Tính điểm ĐH khối D</h1>
+ 
+  <label>Môn Toán</label>
+  <input type="number" id = "toan"><br><br>
+  <label>Môn Văn</label>
+  <input type="number" id = "van"><br><br>
+  <label>Môn Anh</label>
+  <input type="number" id = "anh"><br><br>
+  
+  <label>Khu vực</label>
+  <select id="monThi"> 
+    <option value="kv1">KV1</option>
+    <option value="kv2">KV2</option>
+    <option value="kv2-nt">KV2-NT</option>
+    <option value="kv3">KV3</option>
+  </select>
+  
+  <br><br>
+  <button type="button" onclick = "tinhDiem()">Tính điểm</button><br>
+  <p id = "result"></p>
+    
+  <script>
+
+    function tinhDiem() {
+      let toan = Number(document.getElementById("toan").value)
+      let van = Number(document.getElementById("van").value)
+      let anh = Number(document.getElementById("anh").value)
+
+      let index = document.getElementById("monThi").selectedIndex
+      let khuVuc = document.getElementsByTagName("option")[index].value
+
+      let tong = toan + van + anh
+
+      switch (khuVuc) {
+        case "kv1":
+          tong += 0.75
+          break
+        case "kv2":
+          tong += 0.25
+          break
+        case "kv2-nt":
+          tong += 0.5
+          break
+        case "kv3":
+          tong = tong
+      }
+      document.getElementById("result").innerHTML = "Tổng điểm thi ĐH khối D: " + tong
+    }
+  </script>
+</body>
+</html>
